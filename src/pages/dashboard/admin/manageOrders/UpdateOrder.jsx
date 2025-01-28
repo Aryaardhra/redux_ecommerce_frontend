@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useUpdateOrderStatusMutation } from '../../../../redux/features/orders/orderApi';
+import { useUpdateOrderStatusMutation } from '../../../../redux/features/orders/OrderApi';
 
 
 const UpdateOrder = ({order, isOpen, onClose}) => {
