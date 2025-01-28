@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { formatDate } from '../../../../utils/formateDate';
 import { Link } from 'react-router-dom';
 import UpdateOrder from './UpdateOrder';
-import { useDeleteOrderMutation, useGetAllOrdersQuery } from '../../../../redux/features/orders/orderApi';
+import { useDeleteOrderMutation, useGetAllOrdersQuery } from '../../../../redux/features/orders/OrderApi';
 
 
 const ManageOrders = () => {
