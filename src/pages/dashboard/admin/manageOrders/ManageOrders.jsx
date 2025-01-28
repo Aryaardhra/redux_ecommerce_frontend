@@ -28,7 +28,7 @@ const ManageOrders = () => {
             refetch();
 
         } catch (error) {
-            console.error("Failed to delete order:", err);
+            console.error("Failed to delete order:", error);
         }
     }
 
