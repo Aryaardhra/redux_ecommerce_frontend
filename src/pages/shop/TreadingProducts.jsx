@@ -1,5 +1,5 @@
 import { useState } from "react"
-//import products from "../../data/products.json"
+import products from "../../data/products.json"
 import ProductCards from './ProductCards'
 import { useFetchAllProductsQuery } from "../../redux/features/products/productsApi"
 
@@ -7,8 +7,8 @@ import { useFetchAllProductsQuery } from "../../redux/features/products/products
 const TreadingProducts = () => {
 
     const [visibleProducts, setVisibleProducts] = useState(8)
-    const { data : { products = [],  }   } = useFetchAllProductsQuery({})
-    //console.log(products)
+    const { data : { products = [],  } = {}, error, isLoading } = useFetchAllProductsQuery({})
+    console.log(products)
     const loadMoreProducts = () => {
         setVisibleProducts(prevCount => prevCount + 4 )
     }

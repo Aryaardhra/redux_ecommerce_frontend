@@ -1,9 +1,8 @@
 import  { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useEditProfileMutation } from '../../../redux/features/auth/authApi';
-
 import avatarImg from '../../../assets/avatar.png'
 import { setUser } from '../../../redux/features/auth/authSlice';
+import { useEditProfileMutation } from '../../../redux/features/auth/authApi';
 
 const UserProfile = () => {
     const dispatch = useDispatch();
@@ -68,8 +67,8 @@ const UserProfile = () => {
                     <img src={formData?.profileImage || avatarImg} alt="" className='w-32 h-32 object-cover rounded-full' />
                     <div className='ml-6'>
                         <h3 className='text-2xl font-semibold'>Username: {formData?.username || 'N/A'}</h3>
-                        <p className='text-gray-700'>User Bio: {formData.bio || 'N/A'}</p>
-                        <p className='text-gray-700'>Profession: {formData.profession || 'N/A'}</p>
+                        <p className='text-gray-700'>User Bio: {formData?.bio || 'N/A'}</p>
+                        <p className='text-gray-700'>Profession: {formData?.profession || 'N/A'}</p>
                     </div>
                     <button
                         onClick={() => setIsModalOpen(true)}
